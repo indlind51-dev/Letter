@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #ffe6ef;
+
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(100%);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        visibility 0.5s;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+.content {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(100, 40, 60, 0.15);
+}
+
+h1 {
+    color: #d94f7d;
+}
+
+h2 {
+    color: #c94b73;
+}
+
+p {
+    color: #654852;
+    line-height: 1.2;
+    margin: 5px 0;
+}
+
+.heart {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.gift {
+    font-size: 90px;
+
+    animation: bounce 1s infinite alternate;
+}
+
+button {
+    display: block;
+
+    width: 100%;
+
+    margin: 10px 0;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #e86b91;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #d9577e;
+    transform: translateY(-2px);
+}
+
+#feedback2,
+#feedback3,
+#feedback4 {
+    font-weight: bold;
+    min-height: 25px;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+/* ================= SURAT ================= */
+
+.letter {
+    width: 100%;
+    max-width: 470px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 35px 30px;
+
+    background: #fffdf8;
+
+    border-radius: 8px;
+
+    text-align: left;
+
+    box-shadow:
+        0 15px 40px rgba(100, 60, 50, 0.15);
+
+    position: relative;
+}
+
+
+/* bagian atas surat */
+
+.letter-top {
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 5px;
+}
+
+
+.letter h2 {
+    text-align: center;
+
+    color: #c94b73;
+
+    margin-bottom: 25px;
+}
+
+
+/* isi surat */
+
+.letter-content p {
+    color: #654852;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin: 12px 0;
+}
+
+
+.love-text {
+    text-align: center;
+
+    color: #d94f7d !important;
+
+    font-weight: bold;
+}
+
+
+/* tombol */
+
+.letter button {
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+
+/* HP */
+
+@media (max-width: 500px) {
+
+    .letter {
+        padding: 28px 22px;
+    }
+
+    .letter-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+}
+
+/* ===============================
+   MUSIC PLAYER MINI
+================================ */
+
+.music-player {
+    position: fixed;
+    right: 808px;
+    bottom: 120px;
+
+    width: 300px;
+    max-width: calc(100% - 36px);
+
+    padding: 14px 16px;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(120, 50, 80, 0.18);
+
+    z-index: 99999;
+}
+
+
+/* INFO LAGU */
+
+.music-info {
+    margin-bottom: 8px;
+}
+
+.song-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.song-artist {
+    font-size: 10px;
+    color: #888;
+    margin-top: 2px;
+}
+
+
+/* CONTROL */
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
+}
+
+.music-control {
+    width: 25px !important;
+    height: 25px !important;
+    min-height: 25px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    color: #333;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: none !important;
+}
+
+.music-control:hover {
+    color: #e86b91;
+    background: transparent !important;
+}
+
+
+/* PLAY */
+
+.play-button {
+    width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 50% !important;
+
+    background: #e8e8e8 !important;
+    color: #555;
+
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: none !important;
+}
+
+.play-button:hover {
+    background: #f4dce5 !important;
+    transform: scale(1.05) !important;
+}
+
+
+/* PROGRESS */
+
+.music-progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #888;
+    font-size: 9px;
+}
+
+.music-progress input[type="range"] {
+    flex: 1;
+    height: 3px;
+
+    margin: 0;
+    padding: 0;
+
+    accent-color: #e86b91;
+
+    cursor: pointer;
+}
+
+/* =================================
+   RESPONSIVE MUSIC PLAYER - HP
+================================= */
+
+@media (max-width: 600px) {
+
+    .music-player {
+        width: 300px;
+        max-width: calc(100% - 30px);
+
+        right: 110px;
+        bottom: 90px;
+
+        padding: 10px 12px;
+
+        border-radius: 14px;
+    }
+
+    .music-info {
+        margin-bottom: 5px;
+    }
+
+    .song-title {
+        font-size: 12px;
+    }
+
+    .song-artist {
+        font-size: 9px;
+        margin-top: 1px;
+    }
+
+    .music-controls {
+        gap: 6px;
+        margin-bottom: 5px;
+    }
+
+    .music-control {
+        width: 22px !important;
+        height: 22px !important;
+        min-height: 22px !important;
+
+        font-size: 11px;
+    }
+
+    .play-button {
+        width: 32px !important;
+        height: 32px !important;
+        min-height: 32px !important;
+
+        font-size: 12px;
+    }
+
+    .music-progress {
+        gap: 4px;
+        font-size: 8px;
+    }
+
+    .music-progress input[type="range"] {
+        height: 3px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .content {
+        max-height: 82vh;
+        padding: 25px 18px;
+    }
+
+}
+
+/* ===============================
+   SLIDE 6 - MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    #slide6 {
+        align-items: flex-start;
+
+        padding-top: 20px;
+        padding-bottom: 120px;
+
+        overflow-y: auto;
+    }
+
+    #slide6 .content {
+        width: 100%;
+        max-width: 470px;
+
+        max-height: calc(100dvh - 150px);
+
+        margin: 0 auto;
+
+        overflow-y: auto;
+
+        padding: 25px 20px 35px;
+    }
+
+}

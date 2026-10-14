@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="slider">
+
+    <!-- SLIDE 1 -->
+    <section class="slide active" id="slide1">
+        <div class="content">
+
+            <div class="emoji">💗</div>
+
+            <h1>Hallo sayanggg ❤️</h1>
+
+            <p>
+                jawab <b>3 pertanyaan</b>
+                dari aku yaa 
+            </p>
+            <button onclick="goToSlide(2)">
+                NEXT →
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- SLIDE 2 -->
+    <section class="slide" id="slide2">
+        <div class="content">
+
+            <span class="number">
+                Pertanyaan 1/3 
+            </span>
+
+            <h2>Soal Logika</h2>
+
+            <p>
+                Ada 5 burung di atas pohon.
+            </p>
+            <p>
+                Kemudian 1 burung ditembak.
+            </p>
+            <p>
+                    Berapa burung yang masih ada
+                    di atas pohon?
+                
+            </p>
+
+            <!-- JAWABAN SUDAH DIBERITAHUKAN -->
+            <p class="answer">
+                 Jawabannya: <b>C. 0</b>
+            </p>
+
+            <div class="options">
+
+                <button onclick="checkAnswer(2, false)">
+                    A. 4
+                </button>
+
+                <button onclick="checkAnswer(2, false)">
+                    B. 5
+                </button>
+
+                <button onclick="checkAnswer(2, true)">
+                    C. 0
+                </button>
+
+                <button onclick="checkAnswer(2, false)">
+                    D. 1
+                </button>
+
+            </div>
+
+            <p id="feedback2" class="feedback"></p>
+
+        </div>
+    </section>
+
+
+    <!-- SLIDE 3 -->
+    <section class="slide" id="slide3">
+        <div class="content">
+
+            <span class="number">
+                Pertanyaan 2/3 🧠
+            </span>
+
+            <h2>Soal Logika</h2>
+
+            <p>
+                Ayahnya Budi mempunyai 5 anak.
+                <br><br>
+
+                Anak pertama bernama Nana,
+                <br>
+                anak kedua Nini,
+                <br>
+                anak ketiga Nunu,
+                <br>
+                anak keempat Nene.
+                <br><br>
+
+                <b>
+                    Siapa nama anak kelima?
+                </b>
+            </p>
+
+            <!-- JAWABAN SUDAH DIBERITAHUKAN -->
+            <p class="answer">
+                 Jawabannya: <b>B. Budi</b>
+            </p>
+
+            <div class="options">
+
+                <button onclick="checkAnswer(3, false)">
+                    A. Nono
+                </button>
+
+                <button onclick="checkAnswer(3, true)">
+                    B. Budi
+                </button>
+
+                <button onclick="checkAnswer(3, false)">
+                    C. Nana
+                </button>
+
+                <button onclick="checkAnswer(3, false)">
+                    D. Nunu
+                </button>
+
+            </div>
+
+            <p id="feedback3" class="feedback"></p>
+
+        </div>
+    </section>
+
+
+    <!-- SLIDE 4 -->
+    <section class="slide" id="slide4">
+        <div class="content">
+
+            <span class="number">
+                Pertanyaan 3/3 ❤️
+            </span>
+
+            <h2>Pertanyaan terakhir...</h2>
+
+            <p>
+                Kalau aku bilang:
+            </p>
+
+            <h3>
+                "Aku sayang kamu "
+            </h3>
+
+            <p>
+                <b>
+                    Jawaban yang paling tepat apa?
+                </b>
+            </p>
+
+            <!-- JAWABAN SUDAH DIBERITAHUKAN -->
+            <p class="answer">
+                 Jawabannya:
+                <b>wajib jawab C</b>
+            </p>
+
+            <div class="options">
+
+                <button onclick="checkAnswer(4, false)">
+                    A. Oh
+                </button>
+
+                <button onclick="checkAnswer(4, false)">
+                    B. Makasih
+                </button>
+
+                <button onclick="checkAnswer(4, true)">
+                    C. Aku juga sayang kamu ❤️
+                </button>
+
+                <button onclick="checkAnswer(4, false)">
+                    D. Seen 👀
+                </button>
+
+            </div>
+
+            <p id="feedback4" class="feedback"></p>
+
+        </div>
+    </section>
+
+
+ <!-- ================= SLIDE 5 ================= -->
+<section class="slide" id="slide5">
+
+    <div class="content">
+
+        <div class="emoji">💌</div>
+
+        <h2>Untuk Sayangku ❤️</h2>
+
+        <div class="letter-text">
+
+            <p>
+                Maaf ya sayangg, semua soal udah aku jawab
+            </p>
+
+            <p>
+                Bukan karena aku meragukan kemampuan kamu,
+                tapi karena aku nggak mau kamu capek mikir,
+                sayangku.
+            </p>
+
+
+            <p>
+                Aku cuma pengen lihat kamu mau
+                <b>effort sedikit</b> buat aku,
+                walaupun cuma klik-klik pilihan ganda hehe. 🤭
+            </p>
+
+            <p>
+                Dan karena kamu kayanya sudah penasaran banget ama isi surat nya 
+            </p>
+
+            <p class="closing">
+                Silahkan buka isi surat nya,
+                sayangku. ❤️
+            </p>
+
+        </div>
+
+        <button onclick="openGift()">
+            💌 →
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- SLIDE 6 -->
+    <section class="slide" id="slide6">
+        <div class="content gift-page">
+
+            <div class="gift">
+                🎂
+            </div>
+
+            <h1>
+                Happy Birthday 
+            </h1>
+
+            <h2>
+                Myy worlddd ❤️❤️❤️
+            </h2>
+
+            <p>
+                Selamat ulang tahun sayanggg, iii pacar ku makin tuaaa. 
+                maaffin aku, aku nggak bisa kasih kue atau sesuatu yang biasanya dilakukan seorang pacar disaat pacar nya ulang tahun.
+                Untuk sekarang, aku cuma bisa bikin web sederhana
+                seperti ini sebagai salah satu cara kecil dari 
+                aku buat bikin kamu bahagia walaupun besoknya kembali pusing.
+            </p>
+
+            <p>
+                Semoga kamu sehat selalu, rezekinya lancar, teruss makin sayang ama aku.
+                semoga kamu suka dengan ucappan selamat ulang tahunku.
+            </p>
+
+            <p>
+                I LOVE YOU SAYANGGG ❤️
+                Semoga kita bisa terus bersama, melewati banyak ulang tahun berikutnya.
+                Betah-betah ya sama aku, nono ke mana-mana
+            </p>
+
+            <div class="hearts">
+                ❤️ 💕 ❤️ 💕 ❤️
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- MUSIK -->
+
+<!-- ================= MUSIC PLAYER ================= -->
+
+<audio id="bgMusic">
+    <source src="./soulmate.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-player">
+
+    <div class="music-info">
+        <div class="song-title">Relaksasi</div>
+    </div>
+
+    <div class="music-controls">
+
+        <button class="music-control" onclick="likeSong()">
+            ♥
+        </button>
+
+        <button class="music-control" onclick="shuffleSong()">
+            ⤨
+        </button>
+
+        <button class="music-control" onclick="previousSong()">
+            |◀
+        </button>
+
+        <button class="play-button" id="playButton" onclick="toggleMusic()">
+            ▶
+        </button>
+
+        <button class="music-control" onclick="nextSong()">
+            ▶|
+        </button>
+
+        <button class="music-control" onclick="repeatSong()">
+            ↻
+        </button>
+
+    </div>
+
+    <div class="music-progress">
+
+        <span id="currentTime">0:00</span>
+
+        <input
+            type="range"
+            id="progressBar"
+            value="0"
+            min="0"
+            max="100"
+        >
+
+        <span id="duration">0:00</span>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
